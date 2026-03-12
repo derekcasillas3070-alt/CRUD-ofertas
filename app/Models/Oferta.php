@@ -1,0 +1,22 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Oferta extends Model
+{
+    protected $fillable = [
+        'titulo',
+        'vigencia',
+        'tienda',
+        'precio_original',
+        'precio_descuento',
+    ];
+
+    protected $casts = [
+        'vigencia' => 'date',
+        'precio_original' => 'decimal:2',
+        'precio_descuento' => 'decimal:2',
+    ];
+}
